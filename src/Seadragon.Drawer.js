@@ -1,5 +1,7 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
+require(["Seadragon.Utils", "Seadragon.Rect", "Seadragon.Point", "Seadragon.Debug", "Seadragon.Config", "Seadragon.Profiler", "Seadragon.Browser"]
+    function( SeadragonUtils, SeadragonRect, SeadragonPoint, SeadragonDebug, SeadragonConfig, SeadragonProfiler, SeadragonBrowser ) { 
 
 var SeadragonDrawer,
     SeadragonOverlayPlacement;
@@ -1195,3 +1197,6 @@ var SeadragonDrawer,
     };
     
 })();
+
+return SeadragonDrawer;
+});

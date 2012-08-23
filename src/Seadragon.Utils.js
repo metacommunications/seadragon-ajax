@@ -1,19 +1,10 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-
-var SeadragonBrowser = Seadragon.Browser = {
-    UNKNOWN: 0,
-    IE: 1,
-    FIREFOX: 2,
-    SAFARI: 3,
-    CHROME: 4,
-    OPERA: 5
-};
+require( ["Seadragon.Browser"], function( SeadragonBrowser ) {
 
 var SeadragonUtils = function() {
     
     // Fields
-    
     var self = this;
     
     var arrActiveX = ["Msxml2.XMLHTTP", "Msxml3.XMLHTTP", "Microsoft.XMLHTTP"];
@@ -33,7 +24,6 @@ var SeadragonUtils = function() {
     var urlParams = {};
     
     // Constructor
-    
     (function() {
         
         // Browser detect
@@ -606,3 +596,6 @@ var SeadragonUtils = function() {
 
 // Seadragon.Utils is a static class, so make it singleton instance
 SeadragonUtils = Seadragon.Utils = new SeadragonUtils();
+
+return SeadragonUtils;
+});

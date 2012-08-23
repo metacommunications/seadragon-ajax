@@ -1,5 +1,7 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
+require( function() {
+
 
 var SeadragonDisplayRect = Seadragon.DisplayRect = function(x, y, width, height, minLevel, maxLevel) {
     
@@ -15,3 +17,6 @@ var SeadragonDisplayRect = Seadragon.DisplayRect = function(x, y, width, height,
 };
 
 SeadragonDisplayRect.prototype = new SeadragonRect();
+
+return SeadragonDisplayRect;
+});

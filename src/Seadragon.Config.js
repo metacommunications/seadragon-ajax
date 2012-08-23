@@ -1,3 +1,4 @@
+require( function() {
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
@@ -67,3 +68,7 @@ var SeadragonConfig = Seadragon.Config;
     };
 
 })();
+
+
+return SeadragonConfig;
+});

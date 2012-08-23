@@ -1,8 +1,8 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
-require( ["Seadragon.Utils", "Seadragon.MouseTracker"], 
-    function( SeadragonUtils, SeadragonMouseTracker ) {
+require( ["Seadragon.Utils", "Seadragon.MouseTracker", "Seadragon.Browser"], 
+    function( SeadragonUtils, SeadragonMouseTracker, SeadragonBrowser ) {
 
     // Enumerations
     var ButtonState = {

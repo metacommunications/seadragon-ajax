@@ -1,6 +1,8 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
+require( ["Seadragon.Config"], function( SeadragonConfig ) {
+
 var SeadragonDebug = function() {
     
     // Methods
@@ -41,3 +43,6 @@ var SeadragonDebug = function() {
 
 // Seadragon.Debug is a static class, so make it singleton instance
 SeadragonDebug = Seadragon.Debug = new SeadragonDebug();
+
+return SeadragonDebug;
+});
