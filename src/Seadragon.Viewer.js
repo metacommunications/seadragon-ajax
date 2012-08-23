@@ -1,6 +1,9 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
+require(["Seadragon.Utils", "Seadragon.Config", "Seadragon.Strings", "Seadragon.Button"], 
+    function( SeadragonUtils, SeadragonConfig, SeadragonStrings, SeadragonButton ) {
+
 var SeadragonViewer,
     SeadragonControlAnchor;
 
@@ -834,3 +837,9 @@ var SeadragonViewer,
     };
 
 })();
+
+    //This function is called when scripts/helper/util.js is loaded.
+    //If util.js calls define(), then this function is not fired until
+    //util's dependencies have loaded, and the util argument will hold
+    //the module value for "helper/util".
+});
