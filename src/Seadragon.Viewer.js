@@ -314,10 +314,10 @@ var SeadragonViewer,
             innerTracker.setTracking(true);     // default state
             
             // create default navigation control
-            navControl = makeNavControl(self);
-            navControl.style.marginRight = "4px";
-            navControl.style.marginBottom = "4px";
-            self.addControl(navControl, SeadragonControlAnchor.BOTTOM_RIGHT);
+            // navControl = makeNavControl(self);
+            // navControl.style.marginRight = "4px";
+            // navControl.style.marginBottom = "4px";
+            // self.addControl(navControl, SeadragonControlAnchor.BOTTOM_RIGHT);
             
             // mouse tracker handler for container (controls fading)
             outerTracker.enterHandler = onContainerEnter;
@@ -688,7 +688,8 @@ var SeadragonViewer,
             window.setTimeout(function() {
                 onOpen(currentTime, tileSource);
             }, 1);
-        };        
+        };
+        
         this.close = function() {
             if (!source) {
                 return;
