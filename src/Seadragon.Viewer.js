@@ -228,7 +228,6 @@ var SeadragonViewer,
         
         var eventManager = new SeadragonEventManager();
         var innerTracker = new SeadragonMouseTracker(canvas);
-        var outerTracker = new SeadragonMouseTracker(container);
         
         var controls = [];
         var controlsShouldFade = true;
@@ -313,18 +312,6 @@ var SeadragonViewer,
             innerTracker.scrollHandler = onCanvasScroll;
             innerTracker.setTracking(true);     // default state
             
-            // create default navigation control
-            // navControl = makeNavControl(self);
-            // navControl.style.marginRight = "4px";
-            // navControl.style.marginBottom = "4px";
-            // self.addControl(navControl, SeadragonControlAnchor.BOTTOM_RIGHT);
-            
-            // mouse tracker handler for container (controls fading)
-            outerTracker.enterHandler = onContainerEnter;
-            outerTracker.exitHandler = onContainerExit;
-            outerTracker.releaseHandler = onContainerRelease;
-            outerTracker.setTracking(true); // always tracking
-            window.setTimeout(beginControlsAutoHide, 1);    // initial fade out
             
             //append to DOM only at end
             container.appendChild(canvas);
@@ -482,7 +469,6 @@ var SeadragonViewer,
             if (!animating && animated) {
                 // we weren't animating, and now we did ==> animation start
                 eventManager.trigger("animationstart", self);
-                abortControlsAutoHide();
             }
             
             if (animated) {
@@ -501,11 +487,6 @@ var SeadragonViewer,
             if (animating && !animated) {
                 // we were animating, and now we're not anymore ==> animation finish
                 eventManager.trigger("animationfinish", self);
-                
-                // if the mouse has left the container, begin fading controls
-                if (!mouseInside) {
-                    beginControlsAutoHide();
-                }
             }
             
             animating = animated;
@@ -534,76 +515,6 @@ var SeadragonViewer,
             }
             
             return -1;
-        }
-        
-        function scheduleControlsFade() {
-            window.setTimeout(updateControlsFade, 20);
-        }
-        
-        function updateControlsFade() {
-            if (controlsShouldFade) {
-                var currentTime = new Date().getTime();
-                var deltaTime = currentTime - controlsFadeBeginTime;
-                var opacity = 1.0 - deltaTime / controlsFadeLength;
-                
-                opacity = Math.min(1.0, opacity);
-                opacity = Math.max(0.0, opacity);
-                
-                for (var i = controls.length - 1; i >= 0; i--) {
-                    controls[i].setOpacity(opacity);
-                }
-                
-                if (opacity > 0) {
-                    scheduleControlsFade();    // fade again
-                }
-            }
-        }
-        
-        function abortControlsAutoHide() {
-            controlsShouldFade = false;
-            for (var i = controls.length - 1; i >= 0; i--) {
-                controls[i].setOpacity(1.0);
-            }
-        }
-        
-        function beginControlsAutoHide() {
-            if (!SeadragonConfig.autoHideControls) {
-                return;
-            }
-            
-            controlsShouldFade = true;
-            controlsFadeBeginTime = new Date().getTime() + controlsFadeDelay;
-            window.setTimeout(scheduleControlsFade, controlsFadeDelay);
-        }
-        
-        // Mouse interaction with container
-        
-        function onContainerEnter(tracker, position, buttonDownElmt, buttonDownAny) {
-            mouseInside = true;
-            abortControlsAutoHide();
-        }
-        
-        function onContainerExit(tracker, position, buttonDownElmt, buttonDownAny) {
-            // fade controls out over time, only if the mouse isn't down from
-            // within the container (e.g. panning, or using a control)
-            if (!buttonDownElmt) {
-                mouseInside = false;
-                if (!animating) {
-                    beginControlsAutoHide();
-                }
-            }
-        }
-        
-        function onContainerRelease(tracker, position, insideElmtPress, insideElmtRelease) {
-            // the mouse may have exited the container and we ignored it if the
-            // mouse was down from within the container. now when the mouse is
-            // released, we should fade the controls out now.
-            if (!insideElmtRelease) {
-                mouseInside = false;
-                if (!animating) {
-                    beginControlsAutoHide();
-                }
-            }
         }
         
         // Mouse interaction with canvas
@@ -829,7 +740,6 @@ var SeadragonViewer,
 				// window doesn't work properly in IE.
 				SeadragonUtils.addEvent(document, "keydown", onPageKeyDown);
                 
-                onContainerEnter();     // mouse will be inside container now
             } else {
                 // restore previous values for overflow
                 bodyStyle.overflow = bodyOverflow;
@@ -853,7 +763,6 @@ var SeadragonViewer,
 				// remove keyboard listener for esc key
 				SeadragonUtils.removeEvent(document, "keydown", onPageKeyDown);
                 
-                onContainerExit();      // mouse will likely be outside now
             }
             
             if (viewport) {
