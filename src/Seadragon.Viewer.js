@@ -1,11 +1,11 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
-define(["Seadragon.Utils", "Seadragon.Config", "Seadragon.Strings", 
-         "Seadragon.Button", "Seadragon.Browser", "Seadragon.Drawer", 
-         "Seadragon.Viewport", "Seadragon.Point", "Seadragon.Debug",
-         "Seadragon.Profiler", "Seadragon.ButtonGroup", "Seadragon.EventManager",
-         "Seadragon.MouseTracker", "Seadragon.DziTileSource"], 
+define(["seadragon/Seadragon.Utils", "seadragon/Seadragon.Config", "seadragon/Seadragon.Strings", 
+         "seadragon/Seadragon.Button", "seadragon/Seadragon.Browser", "seadragon/Seadragon.Drawer", 
+         "seadragon/Seadragon.Viewport", "seadragon/Seadragon.Point", "seadragon/Seadragon.Debug",
+         "seadragon/Seadragon.Profiler", "seadragon/Seadragon.ButtonGroup", "seadragon/Seadragon.EventManager",
+         "seadragon/Seadragon.MouseTracker", "seadragon/Seadragon.Deepzoom"], 
     function( SeadragonUtils, SeadragonConfig, SeadragonStrings, 
               SeadragonButton, SeadragonBrowser, SeadragonDrawer, 
               SeadragonViewport, SeadragonPoint, SeadragonDebug,
@@ -27,7 +27,7 @@ var SeadragonViewer,
     
     // Controls
     
-    SeadragonControlAnchor = Seadragon.ControlAnchor = {
+    SeadragonControlAnchor = {
         NONE: 0,
         TOP_LEFT: 1,
         TOP_RIGHT: 2,
@@ -217,7 +217,7 @@ var SeadragonViewer,
     
     // Viewer
     
-    SeadragonViewer = Seadragon.Viewer = function(container) {
+    SeadragonViewer = function(container) {
         
         // Fields
         

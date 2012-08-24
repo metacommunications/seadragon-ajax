@@ -2,7 +2,7 @@
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 define(function() {
 
-var SeadragonPoint = Seadragon.Point;
+var SeadragonPoint;
 
 (function() {
     
@@ -12,7 +12,7 @@ var SeadragonPoint = Seadragon.Point;
         return;
     }
 
-    SeadragonPoint = Seadragon.Point = function(x, y) {
+    SeadragonPoint = function(x, y) {
         
         // Properties
         

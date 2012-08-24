@@ -1,7 +1,11 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-define(["Seadragon.Utils", "Seadragon.Rect", "Seadragon.Point", "Seadragon.Debug", "Seadragon.Config", "Seadragon.Profiler", "Seadragon.Browser"]
-    function( SeadragonUtils, SeadragonRect, SeadragonPoint, SeadragonDebug, SeadragonConfig, SeadragonProfiler, SeadragonBrowser ) { 
+define(["seadragon/Seadragon.Utils", "seadragon/Seadragon.Rect", "seadragon/Seadragon.Point", 
+        "seadragon/Seadragon.Debug", "seadragon/Seadragon.Config", "seadragon/Seadragon.Profiler", 
+        "seadragon/Seadragon.Browser"],
+    function( SeadragonUtils, SeadragonRect, SeadragonPoint, 
+              SeadragonDebug, SeadragonConfig, SeadragonProfiler, 
+              SeadragonBrowser ) { 
 
 var SeadragonDrawer,
     SeadragonOverlayPlacement;
@@ -280,7 +284,7 @@ var SeadragonDrawer,
     
     // Overlays
     
-    SeadragonOverlayPlacement = Seadragon.OverlayPlacement = {
+    SeadragonOverlayPlacement = {
         CENTER: 0,
         TOP_LEFT: 1,
         TOP: 2,
@@ -480,7 +484,7 @@ var SeadragonDrawer,
     
     // Drawer
     
-    SeadragonDrawer = Seadragon.Drawer = function(source, viewport, elmt) {
+    SeadragonDrawer = function(source, viewport, elmt) {
         
         // Implementation note:
         // 

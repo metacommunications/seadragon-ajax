@@ -1,6 +1,6 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-define( ["Seadragon.Browser"], function( SeadragonBrowser ) {
+define( ["seadragon/Seadragon.Browser", "seadragon/Seadragon.Point"], function( SeadragonBrowser, SeadragonPoint ) {
 
 var SeadragonUtils = function() {
     
@@ -595,7 +595,7 @@ var SeadragonUtils = function() {
 };
 
 // Seadragon.Utils is a static class, so make it singleton instance
-SeadragonUtils = Seadragon.Utils = new SeadragonUtils();
+SeadragonUtils = new SeadragonUtils();
 
 return SeadragonUtils;
 });

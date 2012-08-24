@@ -1,10 +1,10 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
-define([ "Seadragon.Strings", "Seadragon.Utils", "Seadragon.Debug", "Seadragon.TileSource", "Seadragon.DisplayRect" ],
+define([ "seadragon/Seadragon.Strings", "seadragon/Seadragon.Utils", "seadragon/Seadragon.Debug", "seadragon/Seadragon.TileSource", "seadragon/Seadragon.DisplayRect" ],
     function(SeadragonStrings, SeadragonUtils, SeadragonDebug, SeadragonTileSource, SeadragonDisplayRect) {
 
-var SeadragonDziTileSource = Seadragon.DziTileSource = function(
+var SeadragonDziTileSource = function(
         width, height, tileSize, tileOverlap, tilesUrl, tileFormat, displayRects) {
     
     // Inheritance

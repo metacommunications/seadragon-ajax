@@ -2,7 +2,7 @@
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 define(function() {
 
-var SeadragonStrings = Seadragon.Strings;
+var SeadragonStrings;
 
 (function() {
 
@@ -10,7 +10,7 @@ var SeadragonStrings = Seadragon.Strings;
         return;     // don't overwrite any strings that may have been added or changed
     }
 
-    SeadragonStrings = Seadragon.Strings = {
+    SeadragonStrings = {
         
         Errors: {
             Failure: "Sorry, but Seadragon Ajax can't run on your browser!\n" +

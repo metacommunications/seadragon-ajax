@@ -1,7 +1,7 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
-define( ["Seadragon.Config"], function( SeadragonConfig ) {
+define( ["seadragon/Seadragon.Config"], function( SeadragonConfig ) {
 
 var SeadragonDebug = function() {
     
@@ -42,7 +42,7 @@ var SeadragonDebug = function() {
 };
 
 // Seadragon.Debug is a static class, so make it singleton instance
-SeadragonDebug = Seadragon.Debug = new SeadragonDebug();
+SeadragonDebug = new SeadragonDebug();
 
 return SeadragonDebug;
 });

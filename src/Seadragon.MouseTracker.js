@@ -1,9 +1,9 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-define( [ "Seadragon.Utils", "Seadragon.Browser", "Seadragon.Debug", "Seadragon.Config" ], 
+define( [ "seadragon/Seadragon.Utils", "seadragon/Seadragon.Browser", "seadragon/Seadragon.Debug", "seadragon/Seadragon.Config" ], 
     function( SeadragonUtils, SeadragonBrowser, SeadragonDebug, SeadragonConfig ) { 
 
-var SeadragonMouseTracker = Seadragon.MouseTracker;
+var SeadragonMouseTracker;
 
 (function() {
     
@@ -83,7 +83,7 @@ var SeadragonMouseTracker = Seadragon.MouseTracker;
     
     // Class
     
-    SeadragonMouseTracker = Seadragon.MouseTracker = function(elmt) {
+    SeadragonMouseTracker = function(elmt) {
         
         // Fields
         

@@ -1,8 +1,8 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-define( ["Seadragon.Debug"], function (SeadragonDebug) { 
+define( ["seadragon/Seadragon.Debug"], function (SeadragonDebug) { 
 
-var SeadragonEventManager = Seadragon.EventManager = function() {
+var SeadragonEventManager = function() {
     
     // Fields
     

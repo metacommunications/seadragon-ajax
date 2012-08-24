@@ -1,9 +1,9 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-define( ["Seadragon.Point", "Seadragon.Spring", "Seadragon.Rect", "Seadragon.Config"], 
+define( ["seadragon/Seadragon.Point", "seadragon/Seadragon.Spring", "seadragon/Seadragon.Rect", "seadragon/Seadragon.Config"], 
     function(SeadragonPoint, SeadragonSpring, SeadragonRect, SeadragonConfig) {
 
-var SeadragonViewport = Seadragon.Viewport = function(containerSize, contentSize) {
+var SeadragonViewport = function(containerSize, contentSize) {
     
     // Fields
     
@@ -72,7 +72,7 @@ var SeadragonViewport = Seadragon.Viewport = function(containerSize, contentSize
             yDelta = 0;
         }
         
-        return new Seadragon.Rect(xMin, yMin, xDelta, yDelta);
+        return new SeadragonRect(xMin, yMin, xDelta, yDelta);
     }
     
     // Methods -- CONSTRAINT HELPERS

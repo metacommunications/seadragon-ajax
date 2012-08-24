@@ -1,6 +1,6 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-define(["Seadragon.Utils", "Seadragon.Config", "Seadragon.Debug"] function(SeadragonUtils, SeadragonConfig, SeadragonDebug) { 
+define(["seadragon/Seadragon.Utils", "seadragon/Seadragon.Config", "seadragon/Seadragon.Debug"] function(SeadragonUtils, SeadragonConfig, SeadragonDebug) { 
 
 var SeadragonImageLoader;
 
@@ -56,7 +56,7 @@ var SeadragonImageLoader;
         
     }
     
-    SeadragonImageLoader = Seadragon.ImageLoader = function() {
+    SeadragonImageLoader = function() {
         
         // Fields
         

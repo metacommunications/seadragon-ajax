@@ -1,8 +1,8 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-define(["Seadragon.Point", "Seadragon.Rect"], function(SeadragonPoint, SeadragonRect) {
+define(["seadragon/Seadragon.Point", "seadragon/Seadragon.Rect"], function(SeadragonPoint, SeadragonRect) {
 
-var SeadragonTileSource = Seadragon.TileSource = function(
+var SeadragonTileSource = function(
         width, height, tileSize, tileOverlap, minLevel, maxLevel) {
     
     // Fields

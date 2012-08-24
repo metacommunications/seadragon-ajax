@@ -1,4 +1,4 @@
-define(["Seadragon.Button", "Seadragon.Utils", "Seadragon.MouseTracker"], 
+define(["seadragon/Seadragon.Button", "seadragon/Seadragon.Utils", "seadragon/Seadragon.MouseTracker"], 
 
     function( SeadragonButton, SeadragonUtils, SeadragonMouseTracker ) {
 

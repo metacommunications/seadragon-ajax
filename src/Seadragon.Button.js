@@ -1,7 +1,7 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
-define( ["Seadragon.Utils", "Seadragon.MouseTracker", "Seadragon.Browser"], 
+define( ["seadragon/Seadragon.Utils", "seadragon/Seadragon.MouseTracker", "seadragon/Seadragon.Browser"], 
     function( SeadragonUtils, SeadragonMouseTracker, SeadragonBrowser ) {
 
     // Enumerations

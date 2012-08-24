@@ -1,7 +1,7 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 define( function() {
-var SeadragonProfiler = Seadragon.Profiler = function() {
+var SeadragonProfiler = function() {
     
     // Fields
     

@@ -1,8 +1,8 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-define( ["Seadragon.Config"], function(SeadragonConfig) {
+define( ["seadragon/Seadragon.Config"], function(SeadragonConfig) {
 
-var SeadragonSpring = Seadragon.Spring = function(initialValue) {
+var SeadragonSpring = function(initialValue) {
     
     // Fields
     

@@ -3,7 +3,7 @@
 
 define( function() {
 
-    var SeadragonBrowser = Seadragon.Browser = {
+    var SeadragonBrowser = {
         UNKNOWN: 0,
         IE: 1,
         FIREFOX: 2,
