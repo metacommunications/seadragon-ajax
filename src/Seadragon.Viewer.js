@@ -1,8 +1,16 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
-require(["Seadragon.Utils", "Seadragon.Config", "Seadragon.Strings", "Seadragon.Button", "Seadragon.Browser"], 
-    function( SeadragonUtils, SeadragonConfig, SeadragonStrings, SeadragonButton, SeadragonBrowser ) {
+define(["Seadragon.Utils", "Seadragon.Config", "Seadragon.Strings", 
+         "Seadragon.Button", "Seadragon.Browser", "Seadragon.Drawer", 
+         "Seadragon.Viewport", "Seadragon.Point", "Seadragon.Debug",
+         "Seadragon.Profiler", "Seadragon.ButtonGroup", "Seadragon.EventManager",
+         "Seadragon.MouseTracker", "Seadragon.DziTileSource"], 
+    function( SeadragonUtils, SeadragonConfig, SeadragonStrings, 
+              SeadragonButton, SeadragonBrowser, SeadragonDrawer, 
+              SeadragonViewport, SeadragonPoint, SeadragonDebug,
+              SeadragonProfiler, SeadragonButtonGroup, SeadragonEventManager,
+              SeadragonMouseTracker, SeadragonDziTileSource ) {
 
 var SeadragonViewer,
     SeadragonControlAnchor;
@@ -842,4 +850,5 @@ var SeadragonViewer,
     //If util.js calls define(), then this function is not fired until
     //util's dependencies have loaded, and the util argument will hold
     //the module value for "helper/util".
+    return SeadragonViewer;
 });

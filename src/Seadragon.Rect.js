@@ -1,5 +1,6 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
+define( ["Seadragon.Point"], function( SeadragonPoint ) {
 
 var SeadragonRect = Seadragon.Rect;
 
@@ -59,3 +60,6 @@ var SeadragonRect = Seadragon.Rect;
     };
 
 })();
+
+require SeadragonRect;
+});

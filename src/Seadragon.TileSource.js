@@ -1,5 +1,6 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
+define(["Seadragon.Point", "Seadragon.Rect"], function(SeadragonPoint, SeadragonRect) {
 
 var SeadragonTileSource = Seadragon.TileSource = function(
         width, height, tileSize, tileOverlap, minLevel, maxLevel) {
@@ -105,3 +106,6 @@ var SeadragonTileSource = Seadragon.TileSource = function(
     };
     
 };
+
+return SeadragonTileSource;
+});

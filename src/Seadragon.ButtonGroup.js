@@ -1,4 +1,4 @@
-require(["Seadragon.Button", "Seadragon.Utils", "Seadragon.MouseTracker"], 
+define(["Seadragon.Button", "Seadragon.Utils", "Seadragon.MouseTracker"], 
 
     function( SeadragonButton, SeadragonUtils, SeadragonMouseTracker ) {
 
@@ -73,4 +73,6 @@ require(["Seadragon.Button", "Seadragon.Utils", "Seadragon.MouseTracker"],
         })();
         
     };
+
+    return SeadragonButtonGroup;
 });

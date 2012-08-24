@@ -1,6 +1,6 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-require(["Seadragon.Utils", "Seadragon.Config", "Seadragon.Debug"] function(SeadragonUtils, SeadragonConfig, SeadragonDebug) { 
+define(["Seadragon.Utils", "Seadragon.Config", "Seadragon.Debug"] function(SeadragonUtils, SeadragonConfig, SeadragonDebug) { 
 
 var SeadragonImageLoader;
 

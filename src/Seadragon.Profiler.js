@@ -1,6 +1,6 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-
+define( function() {
 var SeadragonProfiler = Seadragon.Profiler = function() {
     
     // Fields
@@ -85,7 +85,8 @@ var SeadragonProfiler = Seadragon.Profiler = function() {
         }
     };
     
-    this.endUpdate = function() {        if (!midUpdate) {
+    this.endUpdate = function() {
+        if (!midUpdate) {
             return;
         }
         
@@ -122,3 +123,6 @@ var SeadragonProfiler = Seadragon.Profiler = function() {
     };
     
 };
+
+return SeadragonProfiler;
+});

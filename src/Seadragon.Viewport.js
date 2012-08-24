@@ -1,5 +1,7 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
+define( ["Seadragon.Point", "Seadragon.Spring", "Seadragon.Rect", "Seadragon.Config"], 
+    function(SeadragonPoint, SeadragonSpring, SeadragonRect, SeadragonConfig) {
 
 var SeadragonViewport = Seadragon.Viewport = function(containerSize, contentSize) {
     
@@ -464,3 +466,6 @@ var SeadragonViewport = Seadragon.Viewport = function(containerSize, contentSize
     init();
     
 };
+
+return SeadragonViewport;
+});

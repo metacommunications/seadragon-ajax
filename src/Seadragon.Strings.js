@@ -1,5 +1,6 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
+define(function() {
 
 var SeadragonStrings = Seadragon.Strings;
 
@@ -77,3 +78,6 @@ var SeadragonStrings = Seadragon.Strings;
     };
 
 })();
+
+return SeadragonStrings;
+});

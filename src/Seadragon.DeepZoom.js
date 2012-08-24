@@ -1,8 +1,9 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
-require( function() {
-    
+define([ "Seadragon.Strings", "Seadragon.Utils", "Seadragon.Debug", "Seadragon.TileSource", "Seadragon.DisplayRect" ],
+    function(SeadragonStrings, SeadragonUtils, SeadragonDebug, SeadragonTileSource, SeadragonDisplayRect) {
+
 var SeadragonDziTileSource = Seadragon.DziTileSource = function(
         width, height, tileSize, tileOverlap, tilesUrl, tileFormat, displayRects) {
     
@@ -335,4 +336,5 @@ SeadragonDziTileSource.prototype = new SeadragonTileSource();
     
 })();
 
+return SeadragonDziTileSource;
 });

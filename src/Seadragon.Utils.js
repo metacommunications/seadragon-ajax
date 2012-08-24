@@ -1,6 +1,6 @@
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
-require( ["Seadragon.Browser"], function( SeadragonBrowser ) {
+define( ["Seadragon.Browser"], function( SeadragonBrowser ) {
 
 var SeadragonUtils = function() {
     
