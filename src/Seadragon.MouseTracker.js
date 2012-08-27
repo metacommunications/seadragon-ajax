@@ -121,7 +121,7 @@ var SeadragonMouseTracker;
                 SeadragonUtils.addEvent(elmt, "mouseout", onMouseOut, false);
                 SeadragonUtils.addEvent(elmt, "mousedown", onMouseDown, false);
                 SeadragonUtils.addEvent(elmt, "mouseup", onMouseUp, false);
-                SeadragonUtils.addEvent(elmt, "mousewheel", onMouseScroll, false);
+                //SeadragonUtils.addEvent(elmt, "mousewheel", onMouseScroll, false);
                 SeadragonUtils.addEvent(elmt, "click", onMouseClick, false);
                 
                 tracking = true;
@@ -135,7 +135,7 @@ var SeadragonMouseTracker;
                 SeadragonUtils.removeEvent(elmt, "mouseout", onMouseOut, false);
                 SeadragonUtils.removeEvent(elmt, "mousedown", onMouseDown, false);
                 SeadragonUtils.removeEvent(elmt, "mouseup", onMouseUp, false);
-                SeadragonUtils.removeEvent(elmt, "mousewheel", onMouseScroll, false);
+                //SeadragonUtils.removeEvent(elmt, "mousewheel", onMouseScroll, false);
                 SeadragonUtils.removeEvent(elmt, "click", onMouseClick, false);
                 
                 releaseMouse();
