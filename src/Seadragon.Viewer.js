@@ -316,11 +316,11 @@ var SeadragonViewer,
             controlsBLStyle.bottom = controlsBRStyle.bottom = "0px";
             
             // mouse tracker handler for canvas (pan and zoom)
-            innerTracker.clickHandler = onCanvasClick;
+            //innerTracker.clickHandler = onCanvasClick;
             innerTracker.pressHandler = onCanvasPress;
             innerTracker.dragHandler = onCanvasDrag;
             innerTracker.releaseHandler = onCanvasRelease;
-            innerTracker.scrollHandler = onCanvasScroll;
+            //innerTracker.scrollHandler = onCanvasScroll;
             innerTracker.setTracking(true);     // default state
             
             

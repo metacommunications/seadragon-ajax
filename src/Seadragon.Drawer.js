@@ -2,10 +2,10 @@
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 define(["seadragon/Seadragon.Utils", "seadragon/Seadragon.Rect", "seadragon/Seadragon.Point", 
         "seadragon/Seadragon.Debug", "seadragon/Seadragon.Config", "seadragon/Seadragon.Profiler", 
-        "seadragon/Seadragon.Browser"],
+        "seadragon/Seadragon.Browser", "seadragon/Seadragon.ImageLoader"],
     function( SeadragonUtils, SeadragonRect, SeadragonPoint, 
               SeadragonDebug, SeadragonConfig, SeadragonProfiler, 
-              SeadragonBrowser ) { 
+              SeadragonBrowser, SeadragonImageLoader ) { 
 
 var SeadragonDrawer,
     SeadragonOverlayPlacement;
