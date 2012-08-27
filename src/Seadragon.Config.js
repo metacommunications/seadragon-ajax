@@ -2,16 +2,15 @@ define( function() {
 //  This code is distributed under the included license agreement, also
 //  available here: http://go.microsoft.com/fwlink/?LinkId=164943
 
-var SeadragonConfig;
 
-(function() {
+(function(window) {
     
     // DUPLICATION CHECK -- necessary to prevent overwriting user changes
-    if (SeadragonConfig) {
+    if (window.SeadragonConfig) {
         return;
     }
 
-    SeadragonConfig = {
+    window.SeadragonConfig = {
         
         debugMode: false,
         
@@ -67,8 +66,8 @@ var SeadragonConfig;
         
     };
 
-})();
+})(window);
 
 
-return SeadragonConfig;
+return window.SeadragonConfig;
 });
